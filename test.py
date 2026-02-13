@@ -1,9 +1,13 @@
-count = 1
+import random
 
-while count <= 5:
-    print("Yes, the number is less than 5")
-    if count < 5:
-        count += 1
-    elif count >= 5:
-        print("No, the number is not less than 5")
-        break
+number_to_guess = random.randint(1, 10)
+guess = 0
+
+while guess != number_to_guess:
+    guess = int(input("Guess a number between 1 and 10: "))
+    if guess < number_to_guess:
+        print("Too low!")
+    elif guess > number_to_guess:
+        print("Too high!")
+
+print("Congratulations! You've guessed the number.")
