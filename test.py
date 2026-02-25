@@ -11,8 +11,9 @@ while guess != number_to_guess:
     elif guess > number_to_guess:
         print("Too high!")
     else:
-        guess_history.append(guess)
-        print("Your guesses so far:", guess_history)
-
+        print("Congratulations! You've guessed the number.")
+    guess_history.append(guess)
 print("Congratulations! You've guessed the number.")
+for i in range(len(guess_history)):
+    print(f"Guess {i + 1}: {guess_history[i]}")
 print("Your guess history:", guess_history)
